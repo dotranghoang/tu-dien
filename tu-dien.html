@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtValue" value="">
+    <button type="button" onclick="tranSlate()">Translate</button>
+    <div id="result"></div>
+<script>
+    
+    let engLish = ["hello","good morning","goodbye","thank you"];
+    let vietNam = ["xin chào","chào buổi sáng","tạm biệt","cảm ơn"];
+    let result="";
+    function tranSlate() {
+        let txtValue = document.getElementById("txtValue").value;
+        for(var i = 0 ; i < engLish.length ; i++) {
+                 if(txtValue==engLish[i]) {
+                    result = vietNam[i];
+                     document.getElementById("result").innerHTML=result;
+                     break;
+                 }else if(txtValue != engLish.length - 1) {
+                    document.getElementById("result").innerHTML="Not Found."
+                    
+                 }
+
+           
+        }
+    }
+    
+
+</script>
+</body>
+</html>
